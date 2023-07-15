@@ -1,0 +1,34 @@
+@use "../../base.scss";
+
+.home_container {
+  color: base.$white;
+  padding: 0px 50px;
+
+  .hero_banner_container {
+    position: relative;
+
+    .hero_banner_container__hero_banner {
+      object-position: center;
+      object-fit: cover;
+      border-radius: 50px;
+      height: 200px;
+      width: 100%;
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 500;
+      font-size: 34px;
+      margin: 0;
+    }
+  }
+
+  .accomo_card_container {
+    margin-top: 30px;
+    background-color: base.$bg-grey1;
+    padding: 20px;
+  }
+}

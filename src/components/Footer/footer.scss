@@ -1,3 +1,15 @@
+@use "../../base.scss";
+
 footer {
-  height: 100px;
+  padding: 30px 0;
+  background-color: base.$black;
+  color: base.$white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    margin-bottom: 30px;
+  }
 }

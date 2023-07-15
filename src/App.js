@@ -9,7 +9,7 @@ import BaseLayer from "./components/BaseLayer";
 import ErrorPage from "./pages/ErrorPage.js";
 
 // routes
-import Main from "./routes/home";
+import Home from "./routes/Home/home";
 import About from "./routes/about";
 import Accomodation from "./routes/accomodation";
 
@@ -19,7 +19,7 @@ const App = () => {
       <BaseLayer>
         <Routes>
           <Route path="/" element={<Outlet />}>
-            <Route index element={<Main />} />
+            <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route
               path="/accomodation/:accomodationId"

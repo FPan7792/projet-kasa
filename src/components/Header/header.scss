@@ -1,0 +1,14 @@
+@use "../../base.scss";
+
+.inverse {
+  background-color: base.$primary-color;
+  color: white;
+}
+
+header {
+  font: 100% base.$font-stack;
+  color: base.$primary-color;
+  width: 100%;
+  border: black 2px solid;
+  height: 100px;
+}

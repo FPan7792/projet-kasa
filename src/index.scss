@@ -1,6 +1,10 @@
 // RESET CSS
 @import-normalize; /* bring in normalize.css styles */
 
+* {
+  box-sizing: border-box;
+}
+
 /* rest of app styles */
 body {
   box-sizing: border-box;

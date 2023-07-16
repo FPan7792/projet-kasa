@@ -27,13 +27,19 @@
   }
 
   .accomo_card_container {
-    margin-top: 30px;
+    margin: 30px 0;
     background-color: base.$bg-grey1;
     padding: 40px;
     border-radius: 15px;
     display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
+
+    @media (max-width: 768px) {
+      background-color: transparent;
+      padding: 0;
+      gap: 20px;
+    }
   }
 }

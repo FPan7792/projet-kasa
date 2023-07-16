@@ -18,6 +18,10 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
 .app_container {
   flex-direction: column;
   display: flex;

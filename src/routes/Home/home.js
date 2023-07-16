@@ -1,12 +1,11 @@
-import { useState } from "react";
 import { data } from "../../datas/data";
 import styles from "./home.module.scss";
+import { Link } from "react-router-dom";
 
 import banner from "../../assets/imgs/fond_accueil.jpg";
+import Cards from "../../components/AccomoCards/Cards";
 
 const Main = () => {
-  const [test, setTest] = useState(true);
-
   return (
     <div className={styles.home_container}>
       <div className={styles.hero_banner_container}>
@@ -21,14 +20,11 @@ const Main = () => {
       </div>
 
       <div className={styles.accomo_card_container}>
-        {/* {data.map((el) => (
-        <p>{el.description}</p>
+        {data.map((el) => (
+          <Link to={`/accomodation/${el.id}`}>
+            <Cards infos={el} key={el.id} />
+          </Link>
         ))}
-        {test ? (
-          <button onClick={() => setTest(!test)}>Vrai</button>
-          ) : (
-            <button onClick={() => setTest(!test)}>Faux</button>
-          )} */}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import banner from "../../assets/imgs/fond_accueil.jpg";
 import Cards from "../../components/AccomoCards/Cards";
 
-const Main = () => {
+const Home = () => {
   return (
     <div className={styles.home_container}>
       <div className={styles.hero_banner_container}>
@@ -21,8 +21,8 @@ const Main = () => {
 
       <div className={styles.accomo_card_container}>
         {data.map((el) => (
-          <Link to={`/accomodation/${el.id}`} state={{ infos: el }}>
-            <Cards infos={el} key={el.id} />
+          <Link key={el.id} to={`/accomodation/${el.id}`} state={{ infos: el }}>
+            <Cards infos={el} />
           </Link>
         ))}
       </div>
@@ -30,4 +30,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

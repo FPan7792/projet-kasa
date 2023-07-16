@@ -11,7 +11,7 @@ import ErrorPage from "./pages/ErrorPage.js";
 // routes
 import Home from "./routes/Home/home";
 import About from "./routes/about";
-import Accomodation from "./routes/accomodation";
+import Accomodation from "./routes/Accomodation/accomodation";
 
 const App = () => {
   return (

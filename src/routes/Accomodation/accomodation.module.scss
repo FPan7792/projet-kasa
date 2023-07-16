@@ -1,0 +1,50 @@
+@use "../../base.scss";
+
+.accomo_page_container {
+  padding: 0 50px;
+
+  .accomo_page_imgs_container {
+    overflow: hidden;
+    height: 450px;
+    max-height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+
+    .accomo_page_imgs_container__img {
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      max-height: auto;
+    }
+
+    .accomo_page_imgs_container__btn__left {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      left: 10px;
+      height: 100px;
+      cursor: pointer;
+    }
+
+    .accomo_page_imgs_container__btn__right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      right: 10px;
+      height: 100px;
+      cursor: pointer;
+    }
+
+    .accomo_page_imgs_container__p {
+      position: absolute;
+      bottom: 10px;
+      font-size: 20px;
+      color: base.$white;
+      font-weight: 500;
+    }
+  }
+}

@@ -21,7 +21,7 @@ const Main = () => {
 
       <div className={styles.accomo_card_container}>
         {data.map((el) => (
-          <Link to={`/accomodation/${el.id}`}>
+          <Link to={`/accomodation/${el.id}`} state={{ infos: el }}>
             <Cards infos={el} key={el.id} />
           </Link>
         ))}

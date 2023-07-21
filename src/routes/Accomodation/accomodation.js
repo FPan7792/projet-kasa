@@ -56,7 +56,7 @@ const Accomodation = () => {
       </div>
 
       <div className={styles.accomo_page_description_section}>
-        <div>
+        <div className={styles.left_part}>
           <div
             className={styles.accomo_page_description_section__location_section}
           >

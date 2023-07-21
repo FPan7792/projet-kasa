@@ -75,27 +75,34 @@
     //   border: green 2px solid;
     // }
 
-    .accomo_page_description_section__location_section {
-      h1 {
-        font-weight: 600;
-      }
-
-      p {
-        margin: 5px 0;
-        font-weight: 500;
-      }
-    }
-
-    @media (max-width: 768px) {
+    .left_part {
       display: flex;
       flex-direction: column;
-    }
-  }
+      justify-content: space-between;
 
-  .accomo_page_description_section__tags_section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+      .accomo_page_description_section__location_section {
+        h1 {
+          font-weight: 600;
+        }
+
+        p {
+          margin: 5px 0;
+          font-weight: 500;
+        }
+      }
+
+      //   @media (max-width: 768px) {
+      //     display: flex;
+      //     flex-direction: column;
+      //   }
+    }
+
+    .accomo_page_description_section__tags_section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
   }
 
   .right_part {
@@ -103,17 +110,19 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      justify-content: end;
 
       .splitted_name {
         display: flex;
         align-items: end;
         flex-direction: column;
         font-weight: 500;
+        font-size: 17px;
       }
 
       img {
         border-radius: 50%;
-        width: 80px;
+        width: 60px;
 
         @media (max-width: 768px) {
           width: 40px;

@@ -13,4 +13,14 @@ footer {
   img {
     margin-bottom: 30px;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
+
+  p {
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
 }

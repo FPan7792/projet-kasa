@@ -4,6 +4,10 @@
   padding: 0 50px;
   color: base.$primary-red;
 
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+
   .accomo_page_imgs_container {
     overflow: hidden;
     max-height: 450px;
@@ -69,10 +73,12 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    // > div:first-child {
-    //   border: green 2px solid;
-    // }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
     .left_part {
       display: flex;
@@ -80,8 +86,16 @@
       justify-content: space-between;
 
       .accomo_page_description_section__location_section {
+        @media (max-width: 768px) {
+          margin-top: -16px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+
         h1 {
           font-weight: 600;
+          font-size: 21px;
         }
 
         p {
@@ -89,11 +103,6 @@
           font-weight: 500;
         }
       }
-
-      //   @media (max-width: 768px) {
-      //     display: flex;
-      //     flex-direction: column;
-      //   }
     }
 
     .accomo_page_description_section__tags_section {
@@ -101,6 +110,12 @@
       align-items: center;
       gap: 10px;
       margin: 10px 0;
+      overflow-x: auto;
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
     }
   }
 
@@ -117,6 +132,10 @@
         flex-direction: column;
         font-weight: 500;
         font-size: 17px;
+
+        @media (max-width: 768px) {
+          gap: 5px;
+        }
       }
 
       img {
@@ -134,6 +153,7 @@
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
+      margin: 15px 0;
     }
   }
 
@@ -142,5 +162,10 @@
     display: flex;
     gap: 50px;
     height: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }

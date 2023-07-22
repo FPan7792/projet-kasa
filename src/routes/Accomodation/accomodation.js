@@ -1,6 +1,5 @@
-/* eslint-disable no-const-assign */
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./accomodation.module.scss";
 import arrowIcon from "../../assets/icons/arrow_white.svg";
 import TagsPatch from "../../components/Tags/TagsPatch";
@@ -9,19 +8,33 @@ import Collapse from "../../components/Collapse/Collapse";
 
 const Accomodation = () => {
   const { state } = useLocation();
-  const infos = state.infos;
-  console.log(infos);
+  const navigate = useNavigate();
 
+  // accomo datas
+  const [infos, setInfos] = useState(null);
+
+  // redirect if no datas existing
+  useEffect(() => {
+    if (!state || !state.infos) {
+      return navigate("/*");
+    }
+    setInfos(state.infos);
+  }, []);
+
+  // imgs manager
   const [imgIndex, setImgIndex] = useState(1);
-
   const switchImg = (direction) => {
-    if (infos.pictures.length) {
+    if (infos && infos.pictures.length) {
       direction === 1 &&
         imgIndex < infos.pictures.length - 1 &&
         setImgIndex(imgIndex + 1);
       direction === 0 && imgIndex > 1 && setImgIndex(imgIndex - 1);
     }
   };
+
+  if (!infos) {
+    return <p>Loading</p>;
+  }
 
   return (
     <div className={styles.accomo_page_container}>
@@ -50,10 +63,11 @@ const Accomodation = () => {
           height="auto"
           width="auto"
         />
-
-        <p className={styles.accomo_page_imgs_container__p}>{`${imgIndex}/${
-          infos.pictures.length - 1
-        }`}</p>
+        {infos.pictures.length > 1 && (
+          <p className={styles.accomo_page_imgs_container__p}>{`${imgIndex}/${
+            infos.pictures.length - 1
+          }`}</p>
+        )}
       </div>
 
       <div className={styles.accomo_page_description_section}>

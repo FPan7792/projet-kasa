@@ -20,6 +20,7 @@
     .collapse__container__title {
       color: base.$white;
       display: inline-block;
+      font-size: larger;
     }
 
     .collapse__container__arrow_up {
@@ -28,9 +29,11 @@
       display: inline-block;
       transform: rotate(180deg);
       transition: base.$base-transition;
+      cursor: pointer;
     }
 
     .collapse__container__arrow_down {
+      cursor: pointer;
       height: 30px;
       width: 30px;
       display: inline-block;

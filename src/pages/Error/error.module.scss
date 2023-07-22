@@ -1,0 +1,29 @@
+@use "../../base.scss";
+
+.error_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-grow: 1;
+  height: 100%;
+  padding: 50px 0;
+  color: base.$primary-red;
+
+  h1 {
+    font-size: 140px;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    color: base.$primary-red;
+  }
+
+  .backlink {
+    text-decoration: underline;
+  }
+}

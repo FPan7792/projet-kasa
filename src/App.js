@@ -6,7 +6,7 @@ import "./base.scss";
 import BaseLayer from "./components/BaseLayer";
 
 // pages
-import ErrorPage from "./pages/ErrorPage.js";
+import ErrorPage from "./pages/Error/ErrorPage.js";
 
 // routes
 import Home from "./routes/Home/home";

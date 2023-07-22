@@ -13,7 +13,7 @@ const Header = () => {
         <div>
           <NavLink
             to="/"
-            className={({ isActive, isPending }) => isActive && "active"}
+            className={({ isActive, isPending }) => (isActive ? "active" : "")}
           >
             Accueil
           </NavLink>

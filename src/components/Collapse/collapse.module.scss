@@ -21,6 +21,10 @@
       color: base.$white;
       display: inline-block;
       font-size: larger;
+
+      @media (max-width: 768px) {
+        font-size: medium;
+      }
     }
 
     .collapse__container__arrow_up {
@@ -30,6 +34,11 @@
       transform: rotate(180deg);
       transition: base.$base-transition;
       cursor: pointer;
+
+      @media (max-width: 768px) {
+        height: 20px;
+        width: 20px;
+      }
     }
 
     .collapse__container__arrow_down {
@@ -38,7 +47,16 @@
       width: 30px;
       display: inline-block;
       transition: base.$base-transition;
+
+      @media (max-width: 768px) {
+        height: 20px;
+        width: 20px;
+      }
     }
+
+    // @media (max-width: 768px) {
+    //   padding: 8px;
+    // }
   }
 
   .description {

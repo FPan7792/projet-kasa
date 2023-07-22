@@ -31,7 +31,7 @@ const About = () => {
       <img
         className={styles.banner__img}
         src={bannerImg}
-        alt=""
+        alt="bannière about"
         height={"auto"}
         width={"auto"}
       />

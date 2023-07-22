@@ -23,7 +23,7 @@ const Collapse = (props) => {
         />
       </div>
       <div className={!isOpen ? styles.closed_description : styles.description}>
-        {props.children}
+        <p className={styles.description__p}>{props.children}</p>
       </div>
     </div>
   );

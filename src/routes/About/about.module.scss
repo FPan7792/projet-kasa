@@ -1,0 +1,23 @@
+@use "../../base.scss";
+
+.container {
+  padding: 0 50px;
+
+  .banner__img {
+    border-radius: 18px;
+    object-fit: cover;
+    object-position: center;
+    min-height: 200px;
+    max-height: 500px;
+    height: 230px;
+    width: 100%;
+  }
+
+  .collapse_container {
+    margin: 20px 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

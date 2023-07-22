@@ -17,11 +17,13 @@
     align-items: center;
     position: relative;
     border-radius: 10px;
+    height: 350px;
 
     .accomo_page_imgs_container__img {
       object-fit: contain;
       object-position: center;
       width: 100%;
+      height: auto;
       max-height: auto;
       border-radius: 20px;
     }

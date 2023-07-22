@@ -10,13 +10,19 @@
   padding: 50px 0;
   color: base.$primary-red;
 
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
   h1 {
     font-size: 140px;
     font-weight: 800;
+    text-align: center;
   }
 
   p {
     font-size: 18px;
+    text-align: center;
   }
 
   a {

@@ -5,6 +5,7 @@ import styles from "./accomodation.module.scss";
 import arrowIcon from "../../assets/icons/arrow_white.svg";
 import TagsPatch from "../../components/Tags/TagsPatch";
 import Ratings from "../../components/Rating/Ratings";
+import Collapse from "../../components/Collapse/Collapse";
 
 const Accomodation = () => {
   const { state } = useLocation();
@@ -97,8 +98,14 @@ const Accomodation = () => {
       </div>
 
       <div className={styles.accomo_page_collapses_container}>
-        <div>description</div>
-        <div>Equipeletns</div>
+        <Collapse title="Description">{infos.description}</Collapse>
+        <Collapse title="Equipement">
+          <ul>
+            {infos.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </div>
   );

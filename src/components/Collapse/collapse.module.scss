@@ -1,0 +1,59 @@
+@use "../../base.scss";
+
+.collapse__container {
+  background-color: base.$bg-grey1;
+  color: base.$primary-red;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+
+  .collapse__container__title_container {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: base.$primary-red;
+    font-weight: 500;
+    border-radius: 8px;
+
+    .collapse__container__title {
+      color: base.$white;
+      display: inline-block;
+    }
+
+    .collapse__container__arrow_up {
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      transform: rotate(180deg);
+      transition: base.$base-transition;
+    }
+
+    .collapse__container__arrow_down {
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      transition: base.$base-transition;
+    }
+  }
+
+  .description {
+    padding: 16px;
+    line-height: 23px;
+    transition: all 0.5s ease-out;
+
+    box-sizing: border-box;
+    height: 210px;
+    min-height: 210px;
+    overflow-y: auto;
+  }
+
+  .closed_description {
+    padding: 0px;
+    line-height: 23px;
+    transition: all 0.5s ease-out;
+    height: 0px;
+    min-height: 0px;
+  }
+}

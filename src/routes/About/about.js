@@ -28,13 +28,18 @@ const About = () => {
 
   return (
     <div className={styles.container}>
-      <img
-        className={styles.banner__img}
-        src={bannerImg}
-        alt="bannière about"
-        height={"auto"}
-        width={"auto"}
-      />
+      <div className={styles.banner__img_container}>
+        <img
+          className={styles.banner__img}
+          src={bannerImg}
+          alt="bannière about"
+          height={"auto"}
+          width={"auto"}
+        />
+
+        <div className={styles.banner__img_container__layer}></div>
+      </div>
+
       <div className={styles.collapse_container}>
         {reinsurrances.map((item, index) => (
           <Collapse key={index} title={item.title}>

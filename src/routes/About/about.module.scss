@@ -3,14 +3,38 @@
 .container {
   padding: 0 50px;
 
-  .banner__img {
-    border-radius: 18px;
-    object-fit: cover;
-    object-position: center;
-    min-height: 200px;
-    max-height: 500px;
-    height: 230px;
-    width: 100%;
+  .banner__img_container {
+    position: relative;
+
+    .banner__img {
+      border-radius: 18px;
+      object-fit: cover;
+      object-position: center;
+      min-height: 200px;
+      max-height: 500px;
+      height: 230px;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        min-height: 110px;
+        height: 110px;
+      }
+    }
+
+    .banner__img_container__layer {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      width: 100%;
+      border-radius: 18px;
+      background-color: #000000;
+      opacity: 25%;
+
+      @media (max-width: 768px) {
+        min-height: 110px;
+        height: 110px;
+      }
+    }
   }
 
   .collapse_container {

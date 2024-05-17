@@ -16,6 +16,7 @@ const Home = () => {
           width="auto"
           height="auto"
         />
+        <div className={styles.hero_banner_container__hero_banner_layer}></div>
         <p>Chez vous, partout et ailleurs</p>
       </div>
 
